@@ -14,9 +14,9 @@ You will have **3 hours** to complete the assessment.
 For this assessment, you are allowed to use the following resources:
 
 * [MDN]
-* A whiteboard or paper to work out problems/code, but it must be within camera
-  range
-* VS Code or a console for coding, testing, and experimentation
+* A whiteboard or paper to work out problems/code, but they must be within
+  camera range
+* VS Code or a console for testing and experimentation
 * Node
 * Postman (when useful)
 * Official documentation, including:
@@ -31,9 +31,9 @@ For this assessment, you are allowed to use the following resources:
   * [Alembic-documentation]
 
 You are **NOT** allowed to refer to any other resources, including--but not
-limited to--other websites (e.g., AA Open, StackOverflow), communication apps
-(e.g., Slack, Discord), search engines, notes, or any of your previously
-written code.
+limited to--other websites (e.g., a/A curriculum on Canvas, StackOverflow),
+communication apps (e.g., Slack, Discord), search engines, notes, or any of your
+previously written code.
 
 ## Getting started
 
