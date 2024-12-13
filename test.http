@@ -4,3 +4,6 @@
 :protocol = http
 # get homepage
 GET :protocol://:host::port/
+
+# get simple form
+GET :protocol://:host::port/simple-form
