@@ -180,6 +180,16 @@ have the following mappings on it.
 types.
 
 Create a migration for this and upgrade your database.
+```bash
+# initialize alembic
+flask db init
+
+# this creates the up and down somehow
+flask db migrate -m "create simple_people table"
+
+# this runs the up
+flask db upgrade
+```
 
 * Create a *separate* route to handle `POST /simple-form`.
 * It should take the data from the posted form page (name, age, bio)

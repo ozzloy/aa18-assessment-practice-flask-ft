@@ -3,7 +3,7 @@ from flask import Blueprint, redirect, render_template, url_for
 from app.models import db, SimplePerson
 from ..forms import SimpleForm
 
-bp = Blueprint("main", __name__, "/")
+bp = Blueprint("simple", __name__)
 
 
 @bp.route("/")
@@ -21,16 +21,18 @@ def simple_form():
 def simple_form_data():
     form = SimpleForm()
     if form.validate_on_submit():
-        person = SimplePerson(
-            name=form.name.data,
-            age=form.age.data,
-            bio=form.bio.data,
-        )
+        # person = SimplePerson(
+        #     name=form.name.data,
+        #     age=form.age.data,
+        #     bio=form.bio.data,
+        # )
+        person = SimplePerson()
+        form.populate_obj(person)
         db.session.add(person)
         db.session.commit()
-        return redirect(url_for("main.index"))
+        return redirect(url_for("simple.index"))
 
-    return "Bad Data", 400
+    return "Bad Data"
 
 
 @bp.route("/simple-form-data", methods=["GET"])
