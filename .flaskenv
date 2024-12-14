@@ -1,2 +1,4 @@
-FLASK_APP=app
-FLASK_ENV=development
+FLASK_APP="app"
+FLASK_ENV="development"
+FLASK_RUN_PORT=5001
+FLASK_DEBUG=1
