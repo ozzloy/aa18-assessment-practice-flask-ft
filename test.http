@@ -1,0 +1,29 @@
+# -*- restclient -*-
+:host = localhost
+:port = 5001
+:protocol = http
+# get homepage
+GET :protocol://:host::port/
+
+# get simple form
+GET :protocol://:host::port/simple-form
+-> run-hook (restclient-set-var ":csrf"
+  ((lambda (s)
+    (with-temp-buffer
+      (insert s)
+      (goto-char (point-min))
+      (if (re-search-forward
+            ".*id=\"csrf_token\"[^>]*value=\"\\([^\"]+\\)\".*"
+            nil
+            t)
+          (match-string 1)
+          "no csrf token found")))
+     (buffer-string)))
+
+# make new simple person
+POST :protocol://:host::port/simple-form
+Content-Type: application/x-www-form-urlencoded
+
+csrf_token=:csrf&name=Mgeorgie&age=1&bio=hi
+# get simple form data
+GET :protocol://:host::port/simple-form-data
