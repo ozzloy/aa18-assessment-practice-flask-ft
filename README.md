@@ -181,6 +181,11 @@ have the following mappings on it.
 types.
 
 Create a migration for this and upgrade your database.
+```bash
+pipenv run flask db init
+pipenv run flask db migrate -m "add simple_people table"
+pipenv run flask db upgrade
+```
 
 * Create a *separate* route to handle `POST /simple-form`.
 * It should take the data from the posted form page (name, age, bio)
