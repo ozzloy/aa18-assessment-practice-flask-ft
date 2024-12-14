@@ -14,3 +14,7 @@ def index():
 def simple_form():
     form = SimpleForm()
     return render_template("simple_form.html.j2", form=form)
+
+@bp.route("/simple-form", methods=["POST"])
+def post_simple_form():
+    
