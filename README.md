@@ -44,18 +44,21 @@ Your application should use a SQLite3 database.
 
 Use Pipenv to install the following dependencies.
 
-* pytest
-* pycodestyle
-* pylint
-* rope
-* flask
-* flask-sqlalchemy
-* alembic
-* flask-migrate
-* python-dotenv
-* sqlalchemy
-* wtforms
-* flask-wtf
+```bash
+pipenv install  \
+  pytest \
+  pycodestyle \
+  pylint \
+  rope \
+  flask \
+  flask-sqlalchemy \
+  alembic \
+  flask-migrate \
+  python-dotenv \
+  sqlalchemy \
+  wtforms \
+  flask-wtf
+```
 
 Once you have those installed, activate your virtual environment.
 
