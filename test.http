@@ -20,7 +20,14 @@ GET :protocol://:host::port/simple-form
           "no csrf token found")))
      (buffer-string)))
 
-# make new simple person
+# fail to make new simple person,
+#   should get back "Bad Data"
+POST :protocol://:host::port/simple-form
+Content-Type: application/x-www-form-urlencoded
+
+csrf_token=:csrf&age=1&bio=hi
+# make new simple person with an M-name
+#   should get back main page
 POST :protocol://:host::port/simple-form
 Content-Type: application/x-www-form-urlencoded
 
