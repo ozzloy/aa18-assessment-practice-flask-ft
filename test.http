@@ -30,3 +30,6 @@ POST :protocol://:host::port/simple-form
 Content-Type: application/x-www-form-urlencoded
 
 csrf_token=:csrf&name=Msomething&age=1&bio=the+goatest
+
+# see all the m-people
+GET :protocol://:host::port/simple-form-data
