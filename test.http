@@ -24,4 +24,6 @@ GET :protocol://:host::port/simple-form
 POST :protocol://:host::port/simple-form
 Content-Type: application/x-www-form-urlencoded
 
-csrf_token=:csrf&name=georgie&age=1&bio=hi
+csrf_token=:csrf&name=Mgeorgie&age=1&bio=hi
+# get simple form data
+GET :protocol://:host::port/simple-form-data

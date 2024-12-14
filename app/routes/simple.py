@@ -30,3 +30,13 @@ def post_simple_form():
     db.session.add(person)
     db.session.commit()
     return redirect("/")
+
+
+@bp.route("/simple-form-data")
+def simple_form_data():
+    m_people = SimplePerson.query.filter(
+        SimplePerson.name.like("M%")
+    ).all()
+    return render_template(
+        "simple_form_data.html.j2", people=m_people
+    )
